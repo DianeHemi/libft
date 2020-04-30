@@ -6,7 +6,7 @@
 /*   By: dchampda <dchampda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/29 20:02:29 by dchampda          #+#    #+#             */
-/*   Updated: 2020/04/30 11:04:51 by dchampda         ###   ########.fr       */
+/*   Updated: 2020/04/30 15:40:29 by dchampda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_front(t_list **alst, t_list *new)
 {
-	if (*alst = NULL)
+	if (*alst == NULL)
 	{
 		*alst = new;
 		return ;
@@ -22,5 +22,5 @@ void	ft_lstadd_front(t_list **alst, t_list *new)
 	if (new == NULL)
 		return ;
 	new->next = *alst;
-	*alst = next;
+	*alst = new;
 }
