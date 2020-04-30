@@ -6,7 +6,7 @@
 /*   By: dchampda <dchampda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 13:38:36 by dchampda          #+#    #+#             */
-/*   Updated: 2020/04/30 13:53:50 by dchampda         ###   ########.fr       */
+/*   Updated: 2020/04/30 15:41:16 by dchampda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	{
 		del((*lst)->content);
 		elem_before = *lst;
-		*lst = *elem_before->next;
+		*lst = elem_before->next;
 		free(elem_before);
 	}
 	*lst = NULL;
