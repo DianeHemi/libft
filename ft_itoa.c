@@ -6,13 +6,13 @@
 /*   By: dchampda <dchampda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/29 12:15:43 by dchampda          #+#    #+#             */
-/*   Updated: 2020/05/01 15:41:48 by dchampda         ###   ########.fr       */
+/*   Updated: 2020/05/01 18:18:11 by dchampda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_nb_size(long long int nb)
+static int		ft_nb_size(long nb)
 {
 	unsigned int	nb_size;
 
@@ -30,7 +30,7 @@ static int		ft_nb_size(long long int nb)
 	return (nb_size);
 }
 
-static char		*fill_str(char *str, int len, long long int nbr)
+static char		*fill_str(char *str, int len, long nbr)
 {
 	int				start;
 
@@ -55,7 +55,7 @@ static char		*fill_str(char *str, int len, long long int nbr)
 char			*ft_itoa(int n)
 {
 	char			*res;
-	long long int	nbr;
+	long			nbr;
 	unsigned int	nb_size;
 
 	nbr = n;
