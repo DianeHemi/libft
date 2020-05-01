@@ -6,7 +6,7 @@
 /*   By: dchampda <dchampda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 19:16:10 by dchampda          #+#    #+#             */
-/*   Updated: 2020/05/01 10:27:06 by dchampda         ###   ########.fr       */
+/*   Updated: 2020/05/01 17:49:15 by dchampda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,14 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char	*tmp_dest;
-	unsigned char	*tmp_src;
-	size_t			i;
+	size_t	i;
 
 	i = 0;
-	tmp_dest = (unsigned char *)dest;
-	tmp_src = (unsigned char *)src;
-	if (!dest || !src)
-		return (NULL);
-	if (tmp_src < tmp_dest)
+	if (tmp_dest > tmp_src)
 	{
 		while (n > 0)
 		{
-			tmp_dest[n - 1] = tmp_src[n - 1];
+			((char *)dest)[n - 1] = ((char *)src[n - 1]);
 			n--;
 		}
 	}
@@ -35,7 +29,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	{
 		while (i < n)
 		{
-			tmp_dest[i] = tmp_src[i];
+			((char *)dest)[i] = ((char *)src)[i];
 			i++;
 		}
 	}

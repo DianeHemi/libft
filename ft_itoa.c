@@ -6,15 +6,13 @@
 /*   By: dchampda <dchampda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/29 12:15:43 by dchampda          #+#    #+#             */
-/*   Updated: 2020/05/01 14:17:17 by dchampda         ###   ########.fr       */
+/*   Updated: 2020/05/01 15:41:48 by dchampda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-#include <stdio.h>
-
-static int		ft_nb_size(int nb)
+static int		ft_nb_size(long long int nb)
 {
 	unsigned int	nb_size;
 
@@ -32,11 +30,11 @@ static int		ft_nb_size(int nb)
 	return (nb_size);
 }
 
-static char		*fill_str(char *str, int len, int nbr)
+static char		*fill_str(char *str, int len, long long int nbr)
 {
 	int				start;
 
-	str[len] = '\0';
+	str[len + 1] = '\0';
 	if (nbr < 0)
 	{
 		nbr *= -1;
