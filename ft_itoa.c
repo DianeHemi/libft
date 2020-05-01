@@ -6,7 +6,7 @@
 /*   By: dchampda <dchampda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/29 12:15:43 by dchampda          #+#    #+#             */
-/*   Updated: 2020/04/30 10:59:56 by dchampda         ###   ########.fr       */
+/*   Updated: 2020/05/01 14:17:17 by dchampda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,14 +62,14 @@ char			*ft_itoa(int n)
 
 	nbr = n;
 	nb_size = (unsigned int)ft_nb_size(n);
-	if (nbr < 0)
+	if (nbr <= 0)
 	{
-		if (!(res = malloc(sizeof(char) * nb_size + 1)))
+		if (!(res = malloc(sizeof(char) * nb_size + 2)))
 			return (NULL);
 	}
 	else
 	{
-		if (!(res = malloc(sizeof(char) * nb_size)))
+		if (!(res = malloc(sizeof(char) * nb_size + 1)))
 			return (NULL);
 	}
 	res = fill_str(res, nb_size, nbr);

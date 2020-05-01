@@ -6,7 +6,7 @@
 /*   By: dchampda <dchampda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 18:27:39 by dchampda          #+#    #+#             */
-/*   Updated: 2020/04/30 15:26:28 by dchampda         ###   ########.fr       */
+/*   Updated: 2020/05/01 10:23:49 by dchampda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 	tmp_dest = (unsigned char *)dest;
 	tmp_src = (unsigned char *)src;
+	if (!dest || !src)
+		return (NULL);
 	while (n > 0)
 	{
 		*tmp_dest++ = *tmp_src++;

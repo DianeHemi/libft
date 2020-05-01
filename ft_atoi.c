@@ -6,7 +6,7 @@
 /*   By: dchampda <dchampda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 14:36:34 by dchampda          #+#    #+#             */
-/*   Updated: 2020/04/30 17:20:48 by dchampda         ###   ########.fr       */
+/*   Updated: 2020/05/01 10:47:24 by dchampda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *nptr)
 {
-	int			i;
-	int			negative;
-	long int	res;
+	int				i;
+	int				negative;
+	long long int	res;
 
 	i = 0;
 	negative = 1;

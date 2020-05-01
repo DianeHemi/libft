@@ -6,7 +6,7 @@
 /*   By: dchampda <dchampda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/28 17:13:00 by dchampda          #+#    #+#             */
-/*   Updated: 2020/04/30 11:02:40 by dchampda         ###   ########.fr       */
+/*   Updated: 2020/05/01 13:32:45 by dchampda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,22 +25,27 @@ static int		is_in_set(char c, const char *set)
 
 char			*ft_strtrim(char const *s1, char const *set)
 {
-	char			*str;
-	unsigned int	i;
-	unsigned int	j;
-	size_t			len;
+	char	*str;
+	size_t	start;
+	size_t	end;
+	size_t	len;
 
-	i = 0;
-	j = ft_strlen(s1) - 1;
+	start = 0;
 	if (!s1 || !set)
 		return (NULL);
-	while (s1[i] != '\0' && is_in_set(s1[i], set))
-		i++;
-	while (is_in_set(s1[j], set))
-		j--;
-	len = (j - i) + 1;
+	while (s1[start] != '\0' && is_in_set(s1[start], set))
+		start++;
+	if ((end = ft_strlen(s1) - 1) > 1)
+	{
+		while (is_in_set(s1[end], set) && end > 1)
+			end--;
+	}
+	if (start > end)
+		len = start - end + 1;
+	else
+		len = end - start + 1;
 	if (!(str = malloc(sizeof(char) * len + 1)))
 		return (NULL);
-	str = ft_substr((char *)s1, i, len);
+	str = ft_substr((char *)s1, start, len);
 	return (str);
 }
