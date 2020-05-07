@@ -18,7 +18,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 
 	if (!lst || !del)
 		return ;
-	while (current)
+	while (*lst)
 	{
 		del((*lst)->content);
 		old_lst = *lst;
