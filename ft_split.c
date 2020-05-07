@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int		ft_count_words(char const *str, char c)
 {
@@ -26,7 +25,6 @@ static int		ft_count_words(char const *str, char c)
 			words_count++;
 		i++;
 	}
-	printf("%d\n", words_count);
 	return (words_count);
 }
 
