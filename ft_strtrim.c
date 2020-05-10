@@ -6,13 +6,11 @@
 /*   By: dchampda <dchampda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/28 17:13:00 by dchampda          #+#    #+#             */
-/*   Updated: 2020/05/10 11:44:29 by dchampda         ###   ########.fr       */
+/*   Updated: 2020/05/10 14:00:23 by dchampda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
