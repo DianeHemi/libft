@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dchampda <dchampda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/28 10:35:04 by dchampda          #+#    #+#             */
-/*   Updated: 2020/05/10 11:22:41 by dchampda         ###   ########.fr       */
+/*   Created: 2020/05/10 11:46:39 by dchampda          #+#    #+#             */
+/*   Updated: 2020/05/10 11:49:42 by dchampda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_calloc(size_t nmemb, size_t size)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	void			*ptr;
-	size_t			total;
+	t_list *dest;
+	t_list *tmp;
 
-	total = nmemb * size;
-	if (!(ptr = malloc(total)))
-		return (NULL);
-	ft_bzero(ptr, total);
-	return (ptr);
+	dest = NULL;
+	while (lst)
+	{
+		if (!(tmp = ft_lstnew(f(lst->content))))
+		{
+			ft_lstclear(&dest, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&dest, tmp);
+		lst = lst->next;
+	}
+	return (dest);
 }

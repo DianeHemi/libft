@@ -6,7 +6,7 @@
 /*   By: dchampda <dchampda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 17:49:35 by dchampda          #+#    #+#             */
-/*   Updated: 2020/04/30 15:23:00 by dchampda         ###   ########.fr       */
+/*   Updated: 2020/05/10 11:25:00 by dchampda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,12 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char *ptr;
+	unsigned int i;
 
-	ptr = (unsigned char *)s;
-	while (n > 0)
+	i = 0;
+	while (i < n)
 	{
-		*ptr = 0;
-		ptr++;
-		n--;
+		((char *)s)[i] = 0;
+		i++;
 	}
 }
