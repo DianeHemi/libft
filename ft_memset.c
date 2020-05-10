@@ -6,7 +6,7 @@
 /*   By: dchampda <dchampda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 16:15:23 by dchampda          #+#    #+#             */
-/*   Updated: 2020/05/10 11:28:46 by dchampda         ###   ########.fr       */
+/*   Updated: 2020/05/10 14:49:22 by dchampda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ void	*ft_memset(void *s, int c, size_t n)
 	{
 		*ptr++ = (unsigned char)c;
 	}
-	return (s);
+	return ((void *)s);
 }
